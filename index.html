@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Admin</title>
+    <link rel="stylesheet" href="./modal.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+    <div id="main">
+        <div id="sidebar">
+            <button id="sidebar-toggle" class="toggle-btn">☰</button>
+            <nav>
+                <ul>
+                    <li>Users</li>
+                    <li>Products</li>
+                    <li>Settings</li>
+                </ul>
+            </nav>
+        </div>
+        <div id="main-container">
+            <button id="restore-sidebar" class="toggle-btn" >☰</button>
+            <div id="bar"></div>
+            <div id="content">
+                <h1></h1>
+				<div class="table-container">
+					<table id="tbl">
+						<caption>
+							<input type="text" name="filter-users" id="filter-users" placeholder="Filter by name, email">
+						</caption>
+						<thead></thead>
+						<tbody></tbody>
+						<tfoot></tfoot>
+					</table>
+				</div>
+            </div>
+        </div>
+    </div>
+	<div class="modal" id="modal">
+        <div class="modal-content">
+			<div class="modal-header">
+				<span class="close" id="close_modal">&times;</span>
+			</div>
+			<div class="modal-body">
+				<h2></h2>
+				<div class="loading-container">
+					<img src="https://i.gifer.com/VAyR.gif" alt="Loading..." class="loading-spinner">
+				</div>
+				<div id="posts"></div>
+			</div>
+        </div>
+    </div>
+    <script src="./functions.js"></script>
+    <script src="./modal.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
