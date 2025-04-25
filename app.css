@@ -61,6 +61,7 @@ body, html {
 #main {
     display: flex;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 #sidebar {
