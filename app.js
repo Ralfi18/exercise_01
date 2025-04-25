@@ -18,5 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
     filter_users.addEventListener('keyup', (e) => {
         load_data('https://jsonplaceholder.typicode.com/users', buildTable);  
     });
+    filter_users.addEventListener('paste', (e) => {
+        load_data('https://jsonplaceholder.typicode.com/users', buildTable);  
+    });
 });
 

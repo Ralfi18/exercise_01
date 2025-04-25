@@ -21,6 +21,7 @@ function getUserPosts(user) {
 function buildTable(data) {
     let filter_users = document.getElementById("filter-users"),
         searchTerm = filter_users ? filter_users.value:'';
+        console.log(searchTerm)
     if (searchTerm.length) {
         data = data.filter(d => d.name.toLowerCase().includes(searchTerm.toLowerCase()) || d.email.toLowerCase().includes(searchTerm.toLowerCase()));
     }
@@ -33,7 +34,7 @@ function buildTable(data) {
         thead_tr    = document.createElement('tr'),
         tfoot_tr    = document.createElement('tr'),
         tfoot_td    = document.createElement('td'),
-        fields      = Object.keys(data[0]).map(key => key);
+        fields      = data.length ? Object.keys(data[0]).map(key => key):[];
         // clear
         thead.innerHTML  = ''; 
         tbody.innerHTML  = ''; 
