@@ -288,4 +288,11 @@ input[type="text"]:focus {
         padding: 8px 12px;
         font-size: 12px;
     }
+
+    .toggle-btn:not(#restore-sidebar) {
+        position: relative;
+        left: 80%;
+        top: 8px;
+        /* margin-top: 0px; */
+    }
 }
